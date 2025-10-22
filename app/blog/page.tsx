@@ -39,7 +39,7 @@ async function getPosts(): Promise<Row[]> {
     .leftJoin(users, eq(posts.authorId, users.id))
     .orderBy(desc(posts.publishedAt));
 
-  // ensure Dates
+
   return rows.map((r) => ({
     ...r,
     published: r.published ? new Date(r.published) : null,
