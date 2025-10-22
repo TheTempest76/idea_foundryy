@@ -1,27 +1,23 @@
-// app/blog/page.tsx  (server component)
 import "server-only";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
-import { db } from "../../src/server/db/client";
-import { posts, users } from "../../src/server/db/schema";
+import { db } from "../../server/db/client";
+import { posts, users } from "../../server/db/schema";
 import { desc, eq, and } from "drizzle-orm";
-import CategoryFilter from "../../components/CategoryFilter";
-import { fetchDistinctCategories } from "../../src/server/db/queries";
-
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: { category?: string };
-}) {
+import CategoryFilter from "../../../components/CategoryFilter";
+import { fetchDistinctCategories } from "../../server/db/queries";
+import { ArrowBigLeft } from "lucide-react";
+export default async function BlogPage(
+  { searchParams }: { searchParams: Promise<{ category?: string }> }
+) {
   noStore();
 
-  const category = searchParams?.category?.trim();
+  const { category } = await searchParams;
   const categories = await fetchDistinctCategories();
 
-  // Build the query conditionally
   const baseSelect = db
     .select({
       id: posts.id,
@@ -44,6 +40,12 @@ export default async function BlogPage({
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
+      <div className="mb-4">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded border hover:bg-accent">
+          <ArrowBigLeft className="h-4 w-4" />
+          Back
+        </Link>
+      </div>
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-3xl font-semibold tracking-tight">Blog</h1>
         <CategoryFilter categories={categories} selected={category ?? null} targetPath="/blog" />

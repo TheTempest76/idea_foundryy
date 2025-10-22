@@ -3,8 +3,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { db } from "../../src/server/db/client";
-import { posts, users } from "../../src/server/db/schema";
+import { db } from "../../server/db/client";
+import { posts, users } from "../../server/db/schema";
 import { eq, sql } from "drizzle-orm";
 
 function slugify(title: string) {
