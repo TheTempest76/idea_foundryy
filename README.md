@@ -42,7 +42,7 @@
 - [X] Assign one or more categories to posts
 - [X] Blog listing page showing all posts
 - [X] Individual post view page
-- [ ] Category filtering on listing page
+- [X] Category filtering on listing page
 - [X] Basic responsive navigation
 - [X] Clean, professional UI
 
