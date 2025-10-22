@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Zap, Users, BarChart3, Sparkles } from "lucide-react"
+import { Zap, BarChart3,  Handshake,SquareStack } from "lucide-react"
 
 export default function Page() {
   return (
@@ -27,7 +27,7 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <Card className="flex flex-col gap-4 p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Users className="h-5 w-5 text-primary" />
+                  <SquareStack className="h-5 w-5 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold">Clearly Defined Categories</h3>
                 <p className="text-sm text-muted-foreground">
@@ -36,7 +36,7 @@ export default function Page() {
                 </Card>
                 <Card className="flex flex-col gap-4 p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
-                  <Sparkles className="h-5 w-5 text-accent" />
+                  <Handshake className="h-5 w-5 text-accent" />
                 </div>
                 <h3 className="text-lg font-semibold">Find Like-Minded Creators</h3>
                 <p className="text-sm text-muted-foreground">
@@ -62,8 +62,7 @@ export default function Page() {
             <Card className="relative overflow-hidden p-8 md:p-12">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" aria-hidden="true" />
               <div className="relative z-10">
-                <div className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
                   <div>
                     <h2 id="cta-title" className="text-pretty text-3xl font-bold md:text-4xl">
                       Start shaping ideas today

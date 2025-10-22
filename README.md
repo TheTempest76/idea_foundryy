@@ -37,32 +37,32 @@
 ## ✨ Features Implemented
 
 ### 🔴 Must Have (Core Requirements – Priority 1)
-- [ ] Blog post CRUD operations (create, read, update, delete)
-- [ ] Category CRUD operations
-- [ ] Assign one or more categories to posts
-- [ ] Blog listing page showing all posts
-- [ ] Individual post view page
+- [x] Blog post CRUD operations (create, read, update, delete)
+- [X] Category CRUD operations
+- [X] Assign one or more categories to posts
+- [X] Blog listing page showing all posts
+- [X] Individual post view page
 - [ ] Category filtering on listing page
-- [ ] Basic responsive navigation
-- [ ] Clean, professional UI
+- [X] Basic responsive navigation
+- [X] Clean, professional UI
 
 ### 🟡 Should Have (Expected Features – Priority 2)
-- [ ] Landing page with at least 3 sections (Header/Hero, Features, Footer)
+- [X] Landing page with at least 3 sections (Header/Hero, Features, Footer)
 - [ ] Dashboard page for managing posts
-- [ ] Draft vs Published post status
-- [ ] Loading and error states
-- [ ] Mobile-responsive design
-- [ ] Content editor (Markdown support)
+- [X] Draft vs Published post status
+- [X] Loading and error states
+- [X] Mobile-responsive design
+- [X] Content editor (Markdown support)
 
 ### 🟢 Nice to Have (Bonus Features – Priority 3)
-- [ ] Full 5-section landing page (Header, Hero, Features, CTA, Footer)
+- [X] Full 5-section landing page (Header, Hero, Features, CTA, Footer)
 - [ ] Search functionality for posts
 - [ ] Post statistics (word count, reading time)
-- [ ] Dark mode support
+- [X] Dark mode support
 - [ ] Advanced rich text editor features
 - [ ] Image upload for posts
-- [ ] Post preview functionality
-- [ ] SEO meta tags
+- [X] Post preview functionality
+- [X] SEO meta tags
 - [ ] Pagination
 
 ---
